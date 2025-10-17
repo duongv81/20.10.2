@@ -1,14 +1,13 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="vi">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Happy Women's Day 20/10</title>
-    <script src="https://upload-widget.cloudinary.com/global/all.js" type="text/javascript"></script>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
     <style>
         body {
             font-family: 'Quicksand', sans-serif;
@@ -125,333 +124,30 @@
                 transform: translateY(0) scale(1);
             }
         }
-
-        /* Form Styles */
-        .form-container {
-            background: white;
-            border-radius: 20px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-            padding: 30px;
-            margin: 20px auto;
-            max-width: 600px;
-            width: calc(100% - 40px);
-            z-index: 1000;
-            position: relative;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-
-        .form-section {
-            margin-bottom: 25px;
-            width: 100%;
-            max-width: 500px;
-        }
-
-        .form-section h2 {
-            color: #db2777;
-            margin-bottom: 15px;
-            font-size: 1.5rem;
-            font-weight: bold;
-            text-align: center;
-        }
-
-        .input-group {
-            margin-bottom: 20px;
-            text-align: center;
-        }
-
-        .input-group label {
-            display: block;
-            margin-bottom: 8px;
-            font-weight: bold;
-            color: #555;
-            text-align: center;
-        }
-
-        .input-group input, .input-group textarea {
-            width: 100%;
-            padding: 12px 15px;
-            border: 2px solid #e0e0e0;
-            border-radius: 10px;
-            font-size: 1rem;
-            transition: border-color 0.3s, box-shadow 0.3s;
-            box-sizing: border-box;
-        }
-
-        .input-group input:focus, .input-group textarea:focus {
-            border-color: #ff4d6d;
-            outline: none;
-            box-shadow: 0 0 0 3px rgba(255, 77, 109, 0.2);
-        }
-
-        .input-group textarea {
-            min-height: 120px;
-            resize: vertical;
-        }
-
-        .btn {
-            background: #28a745;
-            color: white;
-            border: none;
-            padding: 14px 30px;
-            border-radius: 50px;
-            font-size: 1.1rem;
-            font-weight: bold;
-            cursor: pointer;
-            transition: all 0.3s;
-            display: inline-block;
-            margin: 10px auto;
-            box-shadow: 0 4px 15px rgba(40, 167, 69, 0.3);
-            min-width: 200px;
-        }
-
-        .btn:hover {
-            background: #218838;
-            transform: translateY(-2px);
-            box-shadow: 0 6px 20px rgba(40, 167, 69, 0.4);
-        }
-
-        .btn.upload-btn {
-            background: #007bff;
-            box-shadow: 0 4px 15px rgba(0, 123, 255, 0.3);
-        }
-
-        .btn.upload-btn:hover {
-            background: #0069d9;
-            box-shadow: 0 6px 20px rgba(0, 123, 255, 0.4);
-        }
-
-        .btn.copy-btn {
-            background: #007bff;
-            box-shadow: 0 4px 15px rgba(0, 123, 255, 0.3);
-        }
-
-        .btn.copy-btn:hover {
-            background: #0069d9;
-            box-shadow: 0 6px 20px rgba(0, 123, 255, 0.4);
-        }
-
-        .btn.back-btn {
-            background: #6c757d;
-            box-shadow: 0 4px 15px rgba(108, 117, 125, 0.3);
-        }
-
-        .btn.back-btn:hover {
-            background: #5a6268;
-            box-shadow: 0 6px 20px rgba(108, 117, 125, 0.4);
-        }
-
-        .selected-preview {
-            margin-top: 20px;
-            padding: 15px;
-            background-color: #f8f9fa;
-            border-radius: 10px;
-            border: 1px solid #e0e0e0;
-        }
-
-        .selected-preview h4 {
-            margin-bottom: 10px;
-            color: #333;
-        }
-
-        #selected-container {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 10px;
-        }
-
-        .selected-item {
-            position: relative;
-            width: 80px;
-            height: 80px;
-        }
-
-        .selected-item img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            border-radius: 8px;
-            border: 2px solid #ddd;
-        }
-
-        .remove-cloudinary {
-            position: absolute;
-            top: -5px;
-            right: -5px;
-            width: 20px;
-            height: 20px;
-            background-color: red;
-            color: white;
-            border: none;
-            border-radius: 50%;
-            cursor: pointer;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 14px;
-            line-height: 1;
-            padding: 0;
-        }
-
-        .hidden {
-            display: none !important;
-        }
-
-        .share-link {
-            background: #f8f9fa;
-            padding: 15px;
-            border-radius: 10px;
-            margin: 15px 0;
-            word-break: break-all;
-            border: 2px solid #e0e0e0;
-        }
-
-        .loading-overlay {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.7);
-            display: none;
-            justify-content: center;
-            align-items: center;
-            color: white;
-            font-size: 1.5rem;
-            z-index: 3000;
-            backdrop-filter: blur(4px);
-        }
-
-        .spinner {
-            border: 4px solid rgba(255, 255, 255, 0.3);
-            border-top: 4px solid #ff4d6d;
-            border-radius: 50%;
-            width: 40px;
-            height: 40px;
-            animation: spin 1s linear infinite;
-            margin-right: 15px;
-        }
-
-        @keyframes spin {
-            0% { transform: rotate(0deg); }
-            100% { transform: rotate(360deg); }
-        }
-
-        /* Responsive Design */
-        @media (max-width: 768px) {
-            .form-container {
-                margin: 10px;
-                padding: 20px;
-                width: calc(100% - 20px);
-            }
-            
-            .form-section {
-                max-width: 100%;
-            }
-            
-            .btn {
-                min-width: 150px;
-                font-size: 1rem;
-                padding: 12px 25px;
-            }
-            
-            .input-group input, .input-group textarea {
-                font-size: 16px; /* Prevent zoom on iOS */
-            }
-        }
-
-        /* Textarea specific styles */
-        .wish-textarea {
-            font-family: 'Quicksand', sans-serif;
-            line-height: 1.6;
-            border: 2px solid #e0e0e0;
-            border-radius: 15px;
-            padding: 15px;
-            background: #fafafa;
-            transition: all 0.3s ease;
-        }
-
-        .wish-textarea:focus {
-            background: white;
-            border-color: #ff4d6d;
-            box-shadow: 0 0 0 3px rgba(255, 77, 109, 0.1);
-        }
-
-        .wish-textarea::placeholder {
-            color: #999;
-            font-style: italic;
-        }
     </style>
 </head>
 <body class="gradient-bg text-gray-800 min-h-screen flex items-center justify-center p-4 relative">
 
-    <!-- Loading Overlay -->
-    <div id="loading-overlay" class="loading-overlay">
-        <div class="spinner"></div>
-        Đang tạo trang chúc mừng...
-    </div>
+	<!-- Modal xác minh tuổi & không phải mèo -->
+	<div id="ageModal" class="fixed inset-0 bg-black bg-opacity-40 backdrop-blur-sm z-[60] flex items-center justify-center p-4">
+		<div class="bg-white rounded-2xl shadow-2xl max-w-md w-full p-6 text-center border-4 border-pink-100">
+			<h2 class="font-dancing text-3xl text-pink-600 mb-3">Vui lòng xác minh bạn không phải con mèo</h2>
+			<p class="text-pink-700 mb-5">Nhập số tuổi của bạn.</p>
+			<div class="space-y-4 text-left">
+				<label class="block text-sm text-gray-700">Tuổi của bạn</label>
+				<input id="ageInput" type="number" min="1" class="w-full border rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-pink-400" placeholder="Ví dụ: 18" />
+				<label class="inline-flex items-center space-x-2">
+					<input id="notCatCheckbox" type="checkbox" class="w-4 h-4 text-pink-500" />
+					<span>Tôi không phải con mèo</span>
+				</label>
+			</div>
+			<button id="ageConfirmBtn" class="special-button bg-pink-500 text-white font-bold py-2.5 px-6 rounded-full text-base shadow-lg mt-5">Xác nhận</button>
+			<p id="ageError" class="text-red-500 text-sm mt-3 hidden">Vui lòng nhập tuổi hợp lệ và xác nhận bạn không phải mèo.</p>
+		</div>
+	</div>
 
-    <!-- Form Container -->
-    <div id="form-container" class="form-container">
-        <div class="text-center mb-6">
-            <h1 class="font-dancing text-4xl md:text-5xl text-pink-600 mb-2">Happy Women's Day 20/10</h1>
-            <p class="text-lg text-pink-800">Tạo trang chúc mừng đặc biệt</p>
-        </div>
-        
-        <div id="creation-section">
-            <div class="form-section">
-                <h2>Thông tin</h2>
-                <div class="input-group">
-                    <label for="user-name">Tên người gửi</label>
-                    <input type="text" id="user-name" placeholder="Nhập tên của bạn">
-                </div>
-                
-                <div class="input-group">
-                    <label for="recipient-name">Tên người nhận</label>
-                    <input type="text" id="recipient-name" placeholder="Nhập tên người bạn muốn chúc mừng">
-                </div>
-            </div>
-            
-            <div class="form-section">
-                <h2>Lời chúc 20/10</h2>
-                <div class="input-group">
-                    <label for="wish-message">Lời chúc (mỗi dòng là một lời chúc riêng)</label>
-                    <textarea id="wish-message" class="wish-textarea" placeholder="Viết lời chúc 20/10 của bạn...&#10;Mỗi dòng sẽ tạo thành một lời chúc riêng biệt&#10;Ví dụ:&#10;Dòng 1: Lời chúc đầu tiên&#10;Dòng 2: Lời chúc thứ hai"></textarea>
-                </div>
-            </div>
-            
-            <div class="form-section">
-                <h2>Upload Ảnh</h2>
-                <div class="input-group">
-                    <label>Chọn ảnh để trang trí:</label>
-                    <button type="button" id="upload-btn" class="btn upload-btn">📤 Upload Ảnh</button>
-                </div>
-                
-                <div id="selected-images-preview" class="selected-preview hidden">
-                    <h4>Ảnh đã chọn:</h4>
-                    <div id="selected-container"></div>
-                </div>
-            </div>
-            
-            <button id="create-btn" class="btn">Tạo Trang Chúc Mừng</button>
-        </div>
-        
-        <div id="share-section" class="hidden">
-            <div class="text-center">
-                <h2 class="text-2xl text-pink-600 mb-4">Trang chúc mừng đã sẵn sàng!</h2>
-                <p class="mb-4">Chia sẻ link này với người bạn muốn chúc mừng:</p>
-                <button id="copy-btn" class="btn copy-btn">Sao chép Link</button>
-                
-                <div class="share-link" id="share-link">Link sẽ xuất hiện ở đây</div>
-                
-                <button id="new-page" class="btn back-btn">Tạo Trang Mới</button>
-            </div>
-        </div>
-    </div>
-
-    <!-- Lớp phủ ban đầu (cho trang hiển thị) -->
-    <div id="overlay" class="absolute inset-0 bg-pink-200 bg-opacity-80 backdrop-blur-sm z-50 flex flex-col items-center justify-center text-center p-4 hidden">
+    <!-- Lớp phủ ban đầu -->
+    <div id="overlay" class="absolute inset-0 bg-pink-200 bg-opacity-80 backdrop-blur-sm z-50 flex flex-col items-center justify-center text-center p-4">
         <h1 class="font-dancing text-4xl md:text-6xl text-pink-700 mb-4">Một món quà nhỏ...</h1>
         <p class="text-lg md:text-2xl text-pink-600 mb-6">Dành tặng một nửa của thế giới !</p>
         
@@ -461,7 +157,7 @@
             <div id="timer" class="flex justify-center space-x-4 text-2xl font-mono"></div>
         </div>
         
-        <button id="startButton" class="special-button bg-pink-500 text-white font-bold py-3 px-8 rounded-full text-xl shadow-lg">
+		<button id="startButton" class="special-button bg-pink-300 cursor-not-allowed opacity-70 text-white font-bold py-3 px-8 rounded-full text-xl shadow-lg" disabled>
             Nhận Quà Nào!
         </button>
     </div>
@@ -471,6 +167,7 @@
         <header class="mb-8">
             <h1 id="main-title" class="font-dancing text-5xl md:text-7xl font-bold text-pink-600"></h1>
             <p class="text-xl md:text-2xl mt-4 text-pink-800">Gửi đến những người phụ nữ Việt Nam tuyệt vời nhất!</p>
+			
         </header>
 
         <main>
@@ -501,260 +198,6 @@
     </audio>
 
     <script>
-        // --- Dữ liệu lời chúc (phải khai báo trước) ---
-        const wishes = [
-            // 5 lời chúc ban đầu
-            { wish: "Chúc bạn có một ngày 20/10 thật vui vẻ, hạnh phúc và luôn xinh đẹp rạng ngời như những đóa hoa.", image: "https://images.unsplash.com/photo-1582794543139-8ac9cb0f7b11?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=627", bgColor: "bg-rose-100" },
-            { wish: "Nhân ngày 20/10, chúc bạn luôn mạnh khỏe, thành công trong cuộc sống và giữ mãi nụ cười trên môi.", image: "https://images.unsplash.com/photo-1525310072745-f49212b5ac6d?w=500&q=80", bgColor: "bg-purple-100" },
-            { wish: "Chúc cho những người phụ nữ tôi yêu quý một ngày ngập tràn yêu thương và những món quà bất ngờ.", image: "https://images.unsplash.com/photo-1518895949257-7621c3c786d7?w=500&q=80", bgColor: "bg-yellow-100" },
-            { wish: "Bạn là nguồn cảm hứng vô tận. Chúc bạn một ngày 20/10 thật ý nghĩa và trọn vẹn niềm vui!", image: "https://images.unsplash.com/photo-1490750967868-88aa4486c946?w=500&q=80", bgColor: "bg-green-100" },
-            { wish: "Mong rằng mọi điều tốt đẹp nhất sẽ đến với bạn, không chỉ trong hôm nay mà trong suốt 364 ngày còn lại.", image: "https://images.unsplash.com/photo-1674017326482-2bc34041f123?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=435", bgColor: "bg-sky-100" },
-            
-            // 9 lời chúc mới từ lời chúc.docx và 9 ảnh mới từ anh.docx
-            { wish: "Chúc bạn có một ngày 20/10 trọn vẹn, ấm cúng và ngọt ngào. Hãy cứ tươi tắn và lạc quan như cách bạn đã luôn làm bấy lâu nay nhé!", image: "https://images.unsplash.com/photo-1614791199038-6869a104fe5f?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=387", bgColor: "bg-orange-100" },
-            { wish: "Bạn biết không, sự hiện diện của bạn làm cho mọi thứ xung quanh trở nên dễ chịu và tươi sáng hơn rất nhiều. Cảm ơn bạn vì điều đó! Chúc mừng ngày của Bạn.", image: "https://plus.unsplash.com/premium_photo-1677567938655-9e1e07657b14?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=387", bgColor: "bg-fuchsia-100" },
-            { wish: "Mong rằng ngày hôm nay, bạn sẽ nhận được thật nhiều hoa, nhiều quà, nhưng quan trọng nhất là nhận được tất cả sự yêu thương mà bạn đã trao đi bấy lâu nay.", image: "https://plus.unsplash.com/premium_photo-1677678988953-abc65b3bb2c9?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=387", bgColor: "bg-red-100" },
-            { wish: "Hôm nay là ngày đặc biệt của Bạn rồi đấy! Tạm gác mọi thứ lại, chỉ cần nhớ rằng bạn xứng đáng có một ngày thật vui vẻ, được chiều chuộng và chẳng phải lo nghĩ gì cả.", image: "https://plus.unsplash.com/premium_photo-1674502312330-3276dfe981eb?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=387", bgColor: "bg-violet-100" },
-            { wish: "Lời chúc thật lòng: Mong rằng không chỉ hôm nay, mà 365 ngày còn lại bạn cũng sẽ được đối xử như một nữ hoàng/cô công chúa. Bạn xứng đáng mà!", image: "https://plus.unsplash.com/premium_photo-1676070095525-801b95b26997?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=388", bgColor: "bg-lime-100" },
-            { wish: "Bạn là người bạn/đồng nghiệp/người thân tuyệt vời. Cảm ơn vì đã luôn mang đến tiếng cười và sự hỗ trợ chân thành. Chúc bạn có một ngày lễ thật ý nghĩa!", image: "https://images.unsplash.com/photo-1542801204-141ec23989d7?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=387", bgColor: "bg-teal-100" },
-            { wish: "Bạn là ánh nắng, là sắc màu và là lý do để nhiều người mỉm cười mỗi ngày. Hãy cứ tỏa sáng như thế nhé!", image: "https://images.unsplash.com/photo-1526547541286-73a7aaa08f2a?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=387", bgColor: "bg-cyan-100" },
-            { wish: "Chúc bạn luôn mạnh khỏe vì có sức khỏe là có tất cả. Rồi sau đó, hãy thoải mái theo đuổi mọi ước mơ điên rồ nhất của bạn!", image: "https://plus.unsplash.com/premium_photo-1676068243733-df1880c2aef8?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=387", bgColor: "bg-indigo-100" },
-            { wish: "Gửi bạn lời chúc bình an, vui vẻ và không gặp phải bất kỳ chuyện bực mình nào trong ngày hôm nay. Hãy cứ tận hưởng mọi phút giây!", image: "https://plus.unsplash.com/premium_photo-1676070094538-7663fb7c2745?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=388", bgColor: "bg-pink-100" }
-        ];
-
-        // --- ELEMENT SELECTORS ---
-        const loadingOverlay = document.getElementById('loading-overlay');
-        const formContainer = document.getElementById('form-container');
-        const creationSection = document.getElementById('creation-section');
-        const shareSection = document.getElementById('share-section');
-        const createBtn = document.getElementById('create-btn');
-        const copyBtn = document.getElementById('copy-btn');
-        const newPageBtn = document.getElementById('new-page');
-        const shareLink = document.getElementById('share-link');
-        
-        const userNameInput = document.getElementById('user-name');
-        const recipientNameInput = document.getElementById('recipient-name');
-        const messageInput = document.getElementById('wish-message');
-        const selectedImagesPreview = document.getElementById('selected-images-preview');
-        const selectedContainer = document.getElementById('selected-container');
-        const uploadBtn = document.getElementById('upload-btn');
-        
-        // --- DATA AND STATE ---
-        let uploadedCloudinaryImages = [];
-        let currentWomensDayData = null;
-
-        // --- UTILITY FUNCTIONS ---
-        function showLoading() { loadingOverlay.style.display = 'flex'; }
-        function hideLoading() { loadingOverlay.style.display = 'none'; }
-
-        // Check for URL params to display women's day page
-        const urlParams = new URLSearchParams(window.location.search);
-        const womensDayDataParam = urlParams.get('data');
-        
-        console.log('URL params:', window.location.search);
-        console.log('Data param:', womensDayDataParam);
-        
-        if (womensDayDataParam) {
-            formContainer.style.display = 'none';
-            showWomensDayFlow(womensDayDataParam);
-        } else {
-            console.log('No data param found, showing form');
-        }
-
-        // --- Cloudinary Widget ---
-        const cloudinaryWidgetImage = cloudinary.createUploadWidget({
-            cloudName: 'dyk8aumyf',
-            uploadPreset: 'ml_default',
-            sources: ['local', 'url', 'camera'],
-            multiple: true,
-            maxFiles: 10,
-            folder: 'valentine-images',
-            resourceType: 'image',
-        }, (error, result) => {
-            if (error) {
-                console.error('Upload error (Image):', error);
-                alert('Lỗi upload ảnh: ' + error.message);
-            }
-            if (result && result.event === "success") {
-                console.log('Upload successful:', result.info.secure_url);
-                uploadedCloudinaryImages.push(result.info.secure_url);
-                updateSelectedImages();
-            }
-        });
-        
-        uploadBtn.addEventListener('click', () => {
-            try {
-                if (typeof cloudinary === 'undefined') {
-                    alert('Cloudinary chưa được tải. Vui lòng tải lại trang.');
-                    return;
-                }
-                cloudinaryWidgetImage.open();
-            } catch (error) {
-                console.error('Error opening Cloudinary widget:', error);
-                alert('Lỗi mở widget upload: ' + error.message);
-            }
-        });
-
-        function updateSelectedImages() {
-            selectedContainer.innerHTML = '';
-            if (uploadedCloudinaryImages.length > 0) {
-                selectedImagesPreview.classList.remove('hidden');
-                uploadedCloudinaryImages.forEach((imgSrc, index) => {
-                    const imgItem = document.createElement('div');
-                    imgItem.className = 'selected-item';
-                    const img = document.createElement('img');
-                    img.src = imgSrc;
-                    const removeBtn = document.createElement('button');
-                    removeBtn.className = 'remove-cloudinary';
-                    removeBtn.innerHTML = '×';
-                    removeBtn.onclick = function() {
-                        uploadedCloudinaryImages.splice(index, 1);
-                        updateSelectedImages();
-                    };
-                    imgItem.appendChild(img);
-                    imgItem.appendChild(removeBtn);
-                    selectedContainer.appendChild(imgItem);
-                });
-            } else {
-                selectedImagesPreview.classList.add('hidden');
-            }
-        }
-
-        // --- FORM LOGIC ---
-        createBtn.addEventListener('click', function() {
-            try {
-                const userName = userNameInput.value.trim() || 'Người Gửi Ẩn Danh';
-                const recipientName = recipientNameInput.value.trim() || 'Người Đặc Biệt';
-                const message = messageInput.value.trim() || 'Chúc mừng ngày 20/10! Mong bạn có một ngày thật vui vẻ và hạnh phúc.';
-                
-                const womensDayData = { 
-                    userName, 
-                    recipientName, 
-                    message, 
-                    images: uploadedCloudinaryImages || [],
-                    timestamp: new Date().toISOString()
-                };
-                
-                console.log('Creating data:', womensDayData);
-                
-                // Validate data
-                if (!womensDayData.userName || !womensDayData.recipientName || !womensDayData.message) {
-                    throw new Error('Vui lòng điền đầy đủ thông tin');
-                }
-                
-                const jsonString = JSON.stringify(womensDayData);
-                console.log('JSON string:', jsonString);
-                
-                const encodedData = btoa(encodeURIComponent(jsonString));
-                console.log('Encoded data:', encodedData);
-                
-                const shareUrl = `${window.location.origin}${window.location.pathname}?data=${encodedData}`;
-                console.log('Share URL:', shareUrl);
-                
-                creationSection.classList.add('hidden');
-                shareSection.classList.remove('hidden');
-                shareLink.textContent = shareUrl;
-                
-            } catch (error) {
-                console.error('Error creating page:', error);
-                alert('Lỗi tạo trang: ' + error.message);
-            }
-        });
-        
-        copyBtn.addEventListener('click', function() {
-            navigator.clipboard.writeText(shareLink.textContent)
-                .then(() => {
-                    copyBtn.textContent = 'Đã sao chép!';
-                    setTimeout(() => { copyBtn.textContent = 'Sao chép Link'; }, 2000);
-                });
-        });
-        
-        newPageBtn.addEventListener('click', () => window.location.href = window.location.pathname);
-
-        // --- WOMEN'S DAY FLOW LOGIC ---
-        function showWomensDayFlow(encodedData) {
-            try {
-                console.log('Received encoded data:', encodedData);
-                
-                if (!encodedData || encodedData.trim() === '') {
-                    throw new Error('Không có dữ liệu để xử lý');
-                }
-                
-                const decodedData = decodeURIComponent(atob(encodedData));
-                console.log('Decoded data:', decodedData);
-                
-                currentWomensDayData = JSON.parse(decodedData);
-                console.log('Parsed data:', currentWomensDayData);
-                
-                // Validate required fields
-                if (!currentWomensDayData || typeof currentWomensDayData !== 'object') {
-                    throw new Error('Dữ liệu không đúng định dạng');
-                }
-                
-                // Ensure images array exists
-                if (!currentWomensDayData.images) {
-                    currentWomensDayData.images = [];
-                }
-                
-                // Create custom wishes array with only user input
-                const customWishes = [];
-                
-                // Split message by lines and create separate wishes for each line
-                if (currentWomensDayData.message) {
-                    const messageLines = currentWomensDayData.message.split('\n')
-                        .map(line => line.trim())
-                        .filter(line => line.length > 0); // Remove empty lines
-                    
-                    messageLines.forEach((line, index) => {
-                        // Use different images for each wish if available
-                        let imageUrl = "https://images.unsplash.com/photo-1582794543139-8ac9cb0f7b11?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=627";
-                        
-                        if (currentWomensDayData.images && currentWomensDayData.images.length > 0) {
-                            // Cycle through available images
-                            imageUrl = currentWomensDayData.images[index % currentWomensDayData.images.length];
-                        }
-                        
-                        customWishes.push({
-                            wish: line,
-                            image: imageUrl,
-                            bgColor: `bg-${['pink', 'rose', 'purple', 'yellow', 'green', 'sky', 'orange', 'fuchsia', 'red', 'violet'][index % 10]}-100`
-                        });
-                    });
-                }
-                
-                
-                // If no custom message, use default wish with first image
-                if (customWishes.length === 0) {
-                    customWishes.push({
-                        wish: "Chúc mừng ngày 20/10! Mong bạn có một ngày thật vui vẻ và hạnh phúc.",
-                        image: currentWomensDayData.images.length > 0 ? currentWomensDayData.images[0] : "https://images.unsplash.com/photo-1582794543139-8ac9cb0f7b11?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=627",
-                        bgColor: "bg-pink-100"
-                    });
-                }
-                
-                // Store custom wishes in currentWomensDayData for later use
-                currentWomensDayData.customWishes = customWishes;
-                
-                console.log('Updated wishes array:', customWishes);
-                
-                // Show the overlay instead of form
-                document.getElementById('overlay').classList.remove('hidden');
-                document.getElementById('overlay').style.display = 'flex';
-
-            } catch (error) {
-                console.error('Error decoding data:', error);
-                console.error('Stack trace:', error.stack);
-                alert('Lỗi xử lý dữ liệu: ' + error.message + '\nVui lòng kiểm tra lại link hoặc tạo trang mới.');
-                // Don't show form container, just show error and allow refresh
-                setTimeout(() => {
-                    if (confirm('Bạn có muốn tải lại trang để tạo trang mới không?')) {
-                        window.location.href = window.location.pathname;
-                    }
-                }, 1000);
-            }
-        }
-
-        // --- ORIGINAL EFFECTS ---
         const body = document.body;
 
         // --- Tạo hiệu ứng hoa rơi & lấp lánh ---
@@ -785,6 +228,35 @@
             body.appendChild(sparkle);
         }
 
+		// --- Dữ liệu lời chúc ---
+		const wishes = [
+            // 5 lời chúc ban đầu
+            { wish: "Chúc bạn có một ngày 20/10 thật vui vẻ, hạnh phúc và luôn xinh đẹp rạng ngời như những đóa hoa.", image: "https://images.unsplash.com/photo-1582794543139-8ac9cb0f7b11?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=627", bgColor: "bg-rose-100" },
+            { wish: "Nhân ngày 20/10, chúc bạn luôn mạnh khỏe, thành công trong cuộc sống và giữ mãi nụ cười trên môi.", image: "https://images.unsplash.com/photo-1525310072745-f49212b5ac6d?w=500&q=80", bgColor: "bg-purple-100" },
+            { wish: "Chúc cho những người phụ nữ tôi yêu quý một ngày ngập tràn yêu thương và những món quà bất ngờ.", image: "https://images.unsplash.com/photo-1518895949257-7621c3c786d7?w=500&q=80", bgColor: "bg-yellow-100" },
+            { wish: "Chúc mừng ngày Phụ nữ Việt Nam 20/10. Chúc chị luôn mạnh khỏe, thành công trong công việc và cuộc sống. Mong chị luôn được yêu thương, trân trọng và đạt được mọi điều mình mong ước", image: "https://images.unsplash.com/photo-1490750967868-88aa4486c946?w=500&q=80", bgColor: "bg-green-100" },
+            { wish: "Mong rằng mọi điều tốt đẹp nhất sẽ đến với bạn, không chỉ trong hôm nay mà trong suốt 364 ngày còn lại.", image: "https://images.unsplash.com/photo-1674017326482-2bc34041f123?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=435", bgColor: "bg-sky-100" },
+            
+            // 9 lời chúc mới từ lời chúc.docx và 9 ảnh mới từ anh.docx
+            { wish: "Chúc bạn có một ngày 20/10 trọn vẹn, ấm cúng và ngọt ngào. Hãy cứ tươi tắn và lạc quan như cách bạn đã luôn làm bấy lâu nay nhé!", image: "https://images.unsplash.com/photo-1614791199038-6869a104fe5f?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=387", bgColor: "bg-orange-100" },
+            { wish: "Bạn biết không, sự hiện diện của bạn làm cho mọi thứ xung quanh trở nên dễ chịu và tươi sáng hơn rất nhiều. Cảm ơn bạn vì điều đó! Chúc mừng ngày của Bạn.", image: "https://plus.unsplash.com/premium_photo-1677567938655-9e1e07657b14?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=387", bgColor: "bg-fuchsia-100" },
+            { wish: "Mong rằng ngày hôm nay, bạn sẽ nhận được thật nhiều hoa, nhiều quà, nhưng quan trọng nhất là nhận được tất cả sự yêu thương mà bạn đã trao đi bấy lâu nay.", image: "https://plus.unsplash.com/premium_photo-1677678988953-abc65b3bb2c9?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=387", bgColor: "bg-red-100" },
+            { wish: "Hôm nay là ngày đặc biệt của Bạn rồi đấy! Tạm gác mọi thứ lại, chỉ cần nhớ rằng bạn xứng đáng có một ngày thật vui vẻ, được chiều chuộng và chẳng phải lo nghĩ gì cả.", image: "https://plus.unsplash.com/premium_photo-1674502312330-3276dfe981eb?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=387", bgColor: "bg-violet-100" },
+            { wish: "Lời chúc thật lòng: Mong rằng không chỉ hôm nay, mà 365 ngày còn lại bạn cũng sẽ được đối xử như một nữ hoàng/cô công chúa. Bạn xứng đáng mà!", image: "https://plus.unsplash.com/premium_photo-1676070095525-801b95b26997?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=388", bgColor: "bg-lime-100" },
+            { wish: "Bạn là người bạn/đồng nghiệp/người thân tuyệt vời. Cảm ơn vì đã luôn mang đến tiếng cười và sự hỗ trợ chân thành. Chúc bạn có một ngày lễ thật ý nghĩa!", image: "https://images.unsplash.com/photo-1542801204-141ec23989d7?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=387", bgColor: "bg-teal-100" },
+            { wish: "Bạn là ánh nắng, là sắc màu và là lý do để nhiều người mỉm cười mỗi ngày. Hãy cứ tỏa sáng như thế nhé!", image: "https://images.unsplash.com/photo-1526547541286-73a7aaa08f2a?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=387", bgColor: "bg-cyan-100" },
+            { wish: "Chúc bạn luôn mạnh khỏe vì có sức khỏe là có tất cả. Rồi sau đó, hãy thoải mái theo đuổi mọi ước mơ điên rồ nhất của bạn!", image: "https://plus.unsplash.com/premium_photo-1676068243733-df1880c2aef8?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=387", bgColor: "bg-indigo-100" },
+			{ wish: "Gửi bạn lời chúc bình an, vui vẻ và không gặp phải bất kỳ chuyện bực mình nào trong ngày hôm nay. Hãy cứ tận hưởng mọi phút giây!", image: "https://plus.unsplash.com/premium_photo-1676070094538-7663fb7c2745?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=388", bgColor: "bg-pink-100" },
+			{ wish: "Chúc chị có một ngày 20/10 thật ý nghĩa và ấm áp bên gia đình và những người thân yêu. Chúc chị luôn tràn đầy năng lượng tích cực và đạt được mọi mục tiêu trong cuộc sống.", image: "https://images.unsplash.com/photo-1490750967868-88aa4486c946?w=500&q=80", bgColor: "bg-green-100" },
+			{ wish: "Chị à, chúc mừng ngày Phụ nữ Việt Nam! Chúc chị một ngày tràn ngập yêu thương, hoa và quà. Chị hãy cứ vui vẻ, hạnh phúc mỗi ngày nhé!", image: "https://images.unsplash.com/photo-1525310072745-f49212b5ac6d?w=500&q=80", bgColor: "bg-purple-100" },
+			{ wish: "Chị ơi, nhân ngày đặc biệt này, em xin gửi lời trân trọng và biết ơn sâu sắc nhất đến chị. Chúc chị luôn bình an, may mắn và đạt được mọi điều chị mong ước", image: "https://images.unsplash.com/photo-1518895949257-7621c3c786d7?w=500&q=80", bgColor: "bg-yellow-100" },
+			{ wish: "Chị, chúc chị luôn tràn đầy năng lượng, làm việc hiệu quả và có thêm nhiều niềm vui bất ngờ trong ngày đặc biệt này.", image: "https://images.unsplash.com/photo-1542801204-141ec23989d7?w=500&q=80", bgColor: "bg-teal-100" },
+			{ wish: "Chúc mừng 20/10, Chị! Chúc chị luôn tươi mới, tự tin và đạt được những kế hoạch mà chị đang ấp ủ.", image: "https://images.unsplash.com/photo-1490750967868-88aa4486c946?w=500&q=80", bgColor: "bg-rose-100" }
+		];
+
+		// Danh sách lời chúc đang được sử dụng sau khi lọc theo tuổi
+		let filteredWishes = [...wishes];
+		let selectedAge = null;
 
         // --- Xử lý sự kiện & logic ---
         const overlay = document.getElementById('overlay');
@@ -795,7 +267,12 @@
         const giftImage = document.getElementById('giftImage');
         const cardBack = document.getElementById('cardBackContent');
         const revealButton = document.getElementById('revealButton');
-        const mainTitle = document.getElementById('main-title');
+		const mainTitle = document.getElementById('main-title');
+		const ageModal = document.getElementById('ageModal');
+		const ageInput = document.getElementById('ageInput');
+		const notCatCheckbox = document.getElementById('notCatCheckbox');
+		const ageConfirmBtn = document.getElementById('ageConfirmBtn');
+		const ageError = document.getElementById('ageError');
         let currentWishIndex = -1;
         
         // --- Logic đếm ngược ---
@@ -873,6 +350,45 @@
             music.volume = 0.3;
             music.play().catch(e => console.log("User interaction required to play audio."));
         });
+
+		// Xác nhận tuổi và xác minh "không phải mèo"
+		ageConfirmBtn.addEventListener('click', () => {
+			const ageVal = parseInt(ageInput.value, 10);
+			if (!Number.isFinite(ageVal) || ageVal <= 0 || !notCatCheckbox.checked) {
+				ageError.classList.remove('hidden');
+				return;
+			}
+			ageError.classList.add('hidden');
+			selectedAge = ageVal;
+			applyAgeFilter();
+			ageModal.style.opacity = '0';
+			setTimeout(() => ageModal.style.display = 'none', 300);
+			// Mở khóa nút Start
+			startButton.disabled = false;
+			startButton.classList.remove('bg-pink-300','cursor-not-allowed','opacity-70');
+			startButton.classList.add('bg-pink-500');
+		});
+
+		function applyAgeFilter() {
+			if (selectedAge == null) {
+				filteredWishes = [...wishes];
+				currentWishIndex = -1;
+				return;
+			}
+			const hasWord = (text, needle) => (text || '').toLowerCase().includes(needle);
+			if (selectedAge > 20) {
+				filteredWishes = wishes.filter(w => hasWord(w.wish, 'chị'));
+			} else if (selectedAge < 20) {
+				filteredWishes = wishes.filter(w => hasWord(w.wish, 'bạn'));
+			} else {
+				// 20 tuổi: cho phép cả hai
+				filteredWishes = wishes.filter(w => hasWord(w.wish, 'chị') || hasWord(w.wish, 'bạn'));
+			}
+			// Nếu rỗng, fallback để tránh trang trống
+			if (filteredWishes.length === 0) filteredWishes = [...wishes];
+			// Reset index để cho phép đổi câu chúc ngay
+			currentWishIndex = -1;
+		}
         
         // Tạo mặt sau của thiệp
         function createCardBackContent(wishData) {
@@ -888,23 +404,13 @@
         
         // Hiển thị lời chúc mới
         function showNewWish() {
-            // Use custom wishes if available, otherwise use default wishes
-            const wishesToUse = currentWomensDayData && currentWomensDayData.customWishes ? 
-                currentWomensDayData.customWishes : wishes;
-            
-            // If there are no wishes to show, don't do anything
-            if (!wishesToUse || wishesToUse.length === 0) {
-                console.log('No wishes available to show');
-                return;
-            }
-            
             let newIndex;
             do {
-                newIndex = Math.floor(Math.random() * wishesToUse.length);
-            } while (newIndex === currentWishIndex && wishesToUse.length > 1);
+				newIndex = Math.floor(Math.random() * filteredWishes.length);
+			} while (newIndex === currentWishIndex && filteredWishes.length > 1);
             currentWishIndex = newIndex;
             
-            const randomWish = wishesToUse[currentWishIndex];
+			const randomWish = filteredWishes[currentWishIndex];
             cardBack.innerHTML = createCardBackContent(randomWish);
 
             if (!card.classList.contains('is-flipped')) {
@@ -924,16 +430,7 @@
             }
         });
 
-        // Bắt đầu trải nghiệm
-        startButton.addEventListener('click', () => {
-            overlay.style.opacity = '0';
-            setTimeout(() => overlay.style.display = 'none', 1500);
-
-            mainContent.classList.add('visible');
-            animateTitle();
-            music.volume = 0.3;
-            music.play().catch(e => console.log("User interaction required to play audio."));
-        });
+		// Đã gỡ tính năng tải lời chúc từ .docx theo yêu cầu
     </script>
 </body>
 </html>
